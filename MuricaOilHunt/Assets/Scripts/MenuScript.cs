@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class MenuScript : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Application.LoadLevel("Scene_1");
-            Debug.Log("asd");
+            SceneManager.LoadScene("Scene_1");
+            Debug.Log("Scene Loaded");
         }
 	
 	}

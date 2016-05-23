@@ -3,14 +3,23 @@ using System.Collections;
 
 public class BattleManager : MonoBehaviour
 {
-    void PlayerTurn()
-    {
-       //players turn
-    }
+    enum turn {player, enemy}
 
-    void EnemyTurn()
+    [SerializeField]
+    turn currentTurn;
+
+    void Update()
     {
-        //Enemys turn
+        if(currentTurn == turn.player)
+        {
+            
+
+        }
+        else
+        {
+
+
+        }
     }
 
 }
