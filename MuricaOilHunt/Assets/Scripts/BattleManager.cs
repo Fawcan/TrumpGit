@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+/*
+Script handles the events of battle and checks whos turn it is.
+- created by David Halldin
 
+*/
 public class BattleManager : MonoBehaviour
 {
     enum turn {player, enemy}
@@ -11,26 +15,6 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField]
     Enemy enemy;
-
-    void Update()
-    {
-        if(currentTurn == turn.player)
-        {
-            if(attackIsDone)
-            {
-                currentTurn = turn.enemy;
-                attackIsDone = false;
-            }
-
-        }
-        else
-        {
-            attackIsDone = false;
-            currentTurn = turn.player;            
-        }
-
-
-    }
 
     public void AttackIsDone()
     {
@@ -57,6 +41,7 @@ public class BattleManager : MonoBehaviour
         Debug.Log("Clicked one of the buttons");
 
         Attack(attacker.GetComponent<BaseUnit>().Abilities[type], defender.GetComponent<BaseUnit>());
+
         
     }//end PlayerClicking()
 
@@ -64,7 +49,29 @@ public class BattleManager : MonoBehaviour
     {
         Debug.Log("Using: " + ability.name);
         Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
-        defender.TakeDamage(ability.damage, ability.targetEffect);        
+        defender.TakeDamage(ability.damage, ability.targetEffect);
+
+        GameObject defenderHealth;
+
+        Debug.Log("Nadsdsdsd");
+
+        if(currentTurn == turn.player)
+        {
+            defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
+            defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
+            Debug.Log("Health is : " + defender.Health);
+            currentTurn = turn.enemy;
+            //Enemy do attack
+        }
+        else
+        {
+            defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
+            defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
+            currentTurn = turn.player;
+        } 
+                 
+          
+              
     }
 
 

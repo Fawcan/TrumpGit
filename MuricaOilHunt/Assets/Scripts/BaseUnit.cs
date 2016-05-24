@@ -13,6 +13,7 @@ public class BaseUnit : MonoBehaviour
 {
     [SerializeField]
     [Range(0, 100)] private int health;
+    public int Health { get { return health; } }
     [SerializeField]
     [Range(0, 10)] private int Influence;
     [SerializeField]
@@ -61,7 +62,7 @@ public class BaseUnit : MonoBehaviour
     public virtual void TakeDamage(int damage, GameObject effect)
     {
         //effect
-        feedbackText.text += "\n The " + target + " took " + damage + " damage";
+        //feedbackText.text += "\n The " + target + " took " + damage + " damage";
         health -= damage;
         if(health <= 0 && notDead)
         {

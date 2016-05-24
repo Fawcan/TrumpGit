@@ -7,11 +7,11 @@ public class InputManager : MonoBehaviour
     protected Player player;
 
     //public bool isClicked = false;
-    int layerMask;
+    //int layerMask;
 
     void Awake()
     {
-        layerMask = LayerMask.GetMask("Button");
+        //layerMask = LayerMask.GetMask("Button");
         player = GetComponent<Player>();
     }
     void Update()
