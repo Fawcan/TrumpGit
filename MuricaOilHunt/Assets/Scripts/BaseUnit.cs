@@ -12,11 +12,13 @@ CAN BE USED FOR INHERTIANCE OF CERTAIN BEAHVIOUR or CHANGE OF BEHAVIOUR
 public class BaseUnit : MonoBehaviour
 {
     [SerializeField]
-    [Range(0, 100)] private int mHealth;
+    [Range(0, 100)] private int health;
     [SerializeField]
-    [Range(0, 10)] private int mInfluence;
-    protected Rigidbody2D mRigidBody;
-    public bool mNotDead = true;
+    [Range(0, 10)] private int Influence;
+    [SerializeField]
+    private RectTransform healthbar;
+    protected Rigidbody2D RigidBody;
+    public bool notDead = true;
     protected BaseUnit target;
 
     [System.Serializable]
@@ -30,16 +32,24 @@ public class BaseUnit : MonoBehaviour
         [Range(0, 100)]
         public int baseAccuracy;
         AudioClip soundFX;
+        Animator animator;
 
     }
 
     [SerializeField]
     protected ability[] unit_abilitles;
+    [SerializeField]
+    UnityEngine.UI.Text feedbackText;
 
     void Awake()
     {
-        mRigidBody = GetComponent<Rigidbody2D>();
+        RigidBody = GetComponent<Rigidbody2D>();
     }//end Awake()
+
+    void Update()
+    {
+        healthbar.sizeDelta = new Vector2(health * 4.9f, 30.0f); // Draws the healthbar and sets the size 
+    }
 
 
     protected virtual void Die()
@@ -47,28 +57,28 @@ public class BaseUnit : MonoBehaviour
         //play death animation
     }
     
-    public virtual void ApplyDamage(int mDamage, GameObject effect)
+    public virtual void TakeDamage(int damage, GameObject effect)
     {
         //effect
-
-        mHealth -= mDamage;
-        if(mHealth <= 0 && mNotDead)
+        feedbackText.text += "\n The " + target + " took " + damage + " damage";
+        health -= damage;
+        if(health <= 0 && notDead)
         {
-            mNotDead = false;
+            notDead = false;
             Die();
         }
-    }//end ApplyDamage()
+    }//end TakeDamage()
 
-    public virtual void GainInfluence()
-    {
+    //public virtual void GainInfluence()
+    //{
 
-    }
+    //}
 
     protected virtual void Attack(ability currentAbility)
     {
         // play effect on player    currentAbility.attackerEffect;
 
-        target.ApplyDamage(currentAbility.damage, currentAbility.targetEffect);
+        target.TakeDamage(currentAbility.damage, currentAbility.targetEffect);
     }
         
 }//End BaseUnit()
