@@ -3,32 +3,16 @@ using System.Collections;
 
 public class Enemy : BaseUnit
 {
-
-	
-    public void EnemyAttack()
+    void Start()
     {
-        Attack(unit_abilitles[Random.Range(0, unit_abilitles.Length)]);
-
-
-    }
-    /*
-    public void StoltenBergAttack()
-    {
-
-        something 
 
     }
 
-
-    public void PutinAttack()
+    void Something()
     {
-
 
     }
 
-
-
-    */
 
     protected override void Die()
     {

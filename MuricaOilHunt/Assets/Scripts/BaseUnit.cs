@@ -22,7 +22,7 @@ public class BaseUnit : MonoBehaviour
     protected BaseUnit target;
 
     [System.Serializable]
-    protected class ability
+    public class ability
     {
         public string name;
         public int damage;
@@ -38,6 +38,7 @@ public class BaseUnit : MonoBehaviour
 
     [SerializeField]
     protected ability[] unit_abilitles;
+    public ability[] Abilities { get { return unit_abilitles; } }
     [SerializeField]
     UnityEngine.UI.Text feedbackText;
 
@@ -74,11 +75,11 @@ public class BaseUnit : MonoBehaviour
 
     //}
 
-    protected virtual void Attack(ability currentAbility)
-    {
-        // play effect on player    currentAbility.attackerEffect;
+    //protected virtual void Attack(ability currentAbility)
+    //{
+    //    // play effect on player    currentAbility.attackerEffect;
 
-        target.TakeDamage(currentAbility.damage, currentAbility.targetEffect);
-    }
+    //    target.TakeDamage(currentAbility.damage, currentAbility.targetEffect);
+    //}
         
 }//End BaseUnit()

@@ -4,28 +4,17 @@ using UnityEngine.UI;
 
 public class Player : BaseUnit
 {
-    GUIText[] actionButtons;
-
-    //void Awake()
-    //{
-    //    for(int i = 0; i <actionButtons.Length; i++)
-    //    {
-    //        actionButtons[i].text = unit_abilitles[i].attackerEffect;
-    //    }
-    //}
 
 
-    void Start()
+    void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>();
 
     }
 
 
-    void PlayerClicking(int move)
+    void Start()
     {
-
-        Attack(unit_abilitles[move]);
+        //target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>();
 
     }
 
