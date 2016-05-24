@@ -48,7 +48,7 @@ public class BaseUnit : MonoBehaviour
 
     void Update()
     {
-        healthbar.sizeDelta = new Vector2(health * 4.9f, 30.0f); // Draws the healthbar and sets the size 
+        //healthbar.sizeDelta = new Vector2(health * 4.9f, 30.0f); // Draws the healthbar and sets the size 
     }
 
 
