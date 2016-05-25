@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Enemy : BaseUnit
 {
-
+    [SerializeField]
+    GameObject HealthBar;
     
     void Start()
     {
-
+        HealthBar = GameObject.FindGameObjectWithTag("EnemyHealth");
     }
 
     
@@ -17,4 +18,13 @@ public class Enemy : BaseUnit
         //player wins
         base.Die();
     }
+
+    public int GetAttackInput ()
+    {
+        int type = Random.Range(0, Abilities.Length);
+
+        return type;
+    }
+
+
 }
