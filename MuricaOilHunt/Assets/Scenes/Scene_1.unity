@@ -162,7 +162,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1058015806}
-        m_MethodName: PlayerClicking
+        m_MethodName: UseAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -432,7 +432,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1058015806}
-        m_MethodName: PlayerClicking
+        m_MethodName: UseAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -568,7 +568,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1058015806}
-        m_MethodName: PlayerClicking
+        m_MethodName: UseAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1507,6 +1507,7 @@ MonoBehaviour:
   Influence: 1
   healthbar: {fileID: 1457052381}
   notDead: 1
+  battleManager: {fileID: 0}
   unit_abilitles:
   - name: Selfie
     damage: 10
@@ -1873,7 +1874,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1058015806}
-        m_MethodName: PlayerClicking
+        m_MethodName: UseAbility
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2009,6 +2010,7 @@ MonoBehaviour:
   Influence: 1
   healthbar: {fileID: 0}
   notDead: 1
+  battleManager: {fileID: 0}
   unit_abilitles:
   - name: Yell
     damage: 10

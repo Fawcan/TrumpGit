@@ -21,6 +21,8 @@ public class BaseUnit : MonoBehaviour
     protected Rigidbody2D RigidBody;
     public bool notDead = true;
     protected BaseUnit target;
+    [SerializeField]
+    protected BattleManager battleManager;
 
     [System.Serializable]
     public class ability

@@ -16,12 +16,14 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     Enemy enemy;
 
+    
+
     public void AttackIsDone()
     {
         attackIsDone = true;
     }
 
-    public void PlayerClicking(int type)
+    public void UseAbility(int type)
     {
         GameObject attacker;
         GameObject defender;
@@ -57,17 +59,26 @@ public class BattleManager : MonoBehaviour
 
         if(currentTurn == turn.player)
         {
+            
+            
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
             Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;
+            AttackIsDone();
+            Debug.Log("Player Attack was made: ");
+                        
             //Enemy do attack
+             
+            
         }
         else
         {
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
             currentTurn = turn.player;
+            AttackIsDone();
+            Debug.Log("Enemy Attack Was made"); 
         } 
                  
           

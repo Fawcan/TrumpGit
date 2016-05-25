@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        //layerMask = LayerMask.GetMask("Button");
+        //layerMask = LayerMask.GetMask("Ground");
         player = GetComponent<Player>();
     }
     void Update()
