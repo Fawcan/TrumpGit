@@ -1294,7 +1294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTurn: 0
-  enemy: {fileID: 1326663387}
 --- !u!1001 &1192796270
 Prefab:
   m_ObjectHideFlags: 0
@@ -1516,13 +1515,13 @@ MonoBehaviour:
     targetEffect: {fileID: 0}
     baseAccuracy: 100
   - name: Eh
-    damage: 5
+    damage: 10
     abilityPoints: 0
     attackerEffect: {fileID: 0}
     targetEffect: {fileID: 0}
     baseAccuracy: 100
   - name: Insult
-    damage: 5
+    damage: 10
     abilityPoints: 0
     attackerEffect: {fileID: 0}
     targetEffect: {fileID: 0}

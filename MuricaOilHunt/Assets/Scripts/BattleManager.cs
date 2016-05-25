@@ -10,16 +10,19 @@ public class BattleManager : MonoBehaviour
     enum turn {player, enemy}
     [SerializeField]
     turn currentTurn;
-    [SerializeField]
-    //Enemy enemy;
 
+    bool isClicked = false;
+    //bool isDead = false;
+    
     
     IEnumerator AttackPhase(int type)
     {
+        
         Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>());
 
         yield return new WaitForSeconds(1);
+        
 
         Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
             GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>());
@@ -28,9 +31,15 @@ public class BattleManager : MonoBehaviour
 
     public void UseAbility(int type)
     {
-        StartCoroutine(AttackPhase(type));
-        Debug.Log("Clicked one of the buttons");
-        Debug.Log("Enemy performed random attack");
+        if (isClicked == false)
+        {
+            StartCoroutine(AttackPhase(type));
+            Debug.Log("Clicked one of the buttons");
+            Debug.Log("Enemy performed random attack");
+            isClicked = true;
+        }
+
+        
 
     }//end UseAbility()
 
@@ -57,7 +66,8 @@ public class BattleManager : MonoBehaviour
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
             currentTurn = turn.player;
-            Debug.Log("Enemy Attack Was made");             
+            Debug.Log("Enemy Attack Was made");
+            isClicked = false;            
         }                 
           
               

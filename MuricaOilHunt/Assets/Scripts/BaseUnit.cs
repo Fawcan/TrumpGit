@@ -39,6 +39,11 @@ public class BaseUnit : MonoBehaviour
 
     }
 
+    public IEnumerator Delay (float sec)
+    {
+        yield return new WaitForSeconds(sec);
+    }
+    
     [SerializeField]
     protected ability[] unit_abilitles;
     public ability[] Abilities { get { return unit_abilitles; } }
@@ -59,9 +64,12 @@ public class BaseUnit : MonoBehaviour
     protected virtual void Die()
     {
         //play death animation
+        StartCoroutine(Delay(3));
+        Destroy(gameObject);        
+        
     }
     
-    public virtual void TakeDamage(int damage, GameObject effect)
+    public virtual void TakeDamage(int damage, GameObject target)
     {
         //effect
         //feedbackText.text += "\n The " + target + " took " + damage + " damage";
@@ -69,20 +77,8 @@ public class BaseUnit : MonoBehaviour
         if(health <= 0 && notDead)
         {
             notDead = false;
-            Die();
+            Die();            
         }
     }//end TakeDamage()
-
-    //public virtual void GainInfluence()
-    //{
-
-    //}
-
-    //protected virtual void Attack(ability currentAbility)
-    //{
-    //    // play effect on player    currentAbility.attackerEffect;
-
-    //    target.TakeDamage(currentAbility.damage, currentAbility.targetEffect);
-    //}
         
 }//End BaseUnit()
