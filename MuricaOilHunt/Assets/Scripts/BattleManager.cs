@@ -16,15 +16,11 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     Enemy enemy;
 
-    [SerializeField]
-    private int enemyAttack; 
-
     
 
     public void AttackIsDone()
     {
         attackIsDone = true;
-       
     }
 
     public void UseAbility(int type)
@@ -41,7 +37,6 @@ public class BattleManager : MonoBehaviour
         {
             attacker = GameObject.FindGameObjectWithTag("Enemy"); 
             defender = GameObject.FindGameObjectWithTag("Player");
-
         }
 
 
@@ -54,7 +49,6 @@ public class BattleManager : MonoBehaviour
 
     private void Attack(BaseUnit.ability ability, BaseUnit defender)
     {
-
         Debug.Log("Using: " + ability.name);
         Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
         defender.TakeDamage(ability.damage, ability.targetEffect);
@@ -70,20 +64,19 @@ public class BattleManager : MonoBehaviour
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
             Debug.Log("Health is : " + defender.Health);
-            //currentTurn = turn.enemy;
+            currentTurn = turn.enemy;
             AttackIsDone();
             Debug.Log("Player Attack was made: ");
-            UseAbility(enemy.GetAttackInput());
+                        
+            //Enemy do attack
              
             
         }
         else
         {
-            
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            
-            //currentTurn = turn.player;
+            currentTurn = turn.player;
             AttackIsDone();
             Debug.Log("Enemy Attack Was made"); 
         } 
