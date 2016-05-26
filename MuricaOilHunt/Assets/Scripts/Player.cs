@@ -5,7 +5,10 @@ using UnityEngine.UI;
 public class Player : BaseUnit
 {
     
-    
+    void Move()
+    {
+
+    }
 
 
 

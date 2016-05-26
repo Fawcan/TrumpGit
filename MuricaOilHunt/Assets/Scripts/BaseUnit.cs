@@ -66,6 +66,7 @@ public class BaseUnit : MonoBehaviour
     {
         //play death animation
         StartCoroutine(Delay(3));
+        
         Destroy(gameObject);        
         
     }

@@ -4,12 +4,13 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
-    private Transform mPlayer;
+    private Transform player;
     [SerializeField]
     private Vector3 offset;
 
     void Update()
     {
-        transform.position = new Vector3(mPlayer.position.x + offset.x, mPlayer.position.y + offset.y, offset.z); // Camera follows the mPlayer with specified offset position
+        transform.position = new Vector3(player.position.x + offset.x, 
+            player.position.y + offset.y, offset.z); // Camera follows the mPlayer with specified offset position
     }
 }

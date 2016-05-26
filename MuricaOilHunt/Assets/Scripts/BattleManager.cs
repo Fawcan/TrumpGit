@@ -16,11 +16,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     public UIHandler message;
     Enemy enemy;
-    Player player;
-    
-    
+    Player player;    
     bool isClicked = false;
-    //bool isDead = false;
     
     
     IEnumerator AttackPhase(int type)
@@ -67,7 +64,7 @@ public class BattleManager : MonoBehaviour
         {           
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n Crump " + " made an attack " + " using " + ability.name + " inflicting: " + ability.damage + " damage");
+            message.Print("\n Conrad Crump " + "used " + ability.name + " dealing: " + ability.damage + " damage");
             Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;;
             Debug.Log("Player Attack was made: ");
@@ -78,11 +75,14 @@ public class BattleManager : MonoBehaviour
         {
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n William Wallace " + " made an attack " + "using " + ability.name + " inflicting: " + ability.damage + " damage");
+            message.Print("\n William Wallace " + "used " + ability.name + " dealing: " + ability.damage + " damage");
             currentTurn = turn.player;
             Debug.Log("Enemy Attack Was made");
             isClicked = false;            
-        }                 
+        }
+
+     
+                         
           
               
     }

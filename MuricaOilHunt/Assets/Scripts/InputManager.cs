@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 /*
     Script handles all input from the mouse and seperates it from battle into
@@ -8,17 +9,24 @@ using System.Collections;
 */
 public class InputManager : MonoBehaviour
 {
-    [SerializeField]
-    protected Player player;
 
-    //public bool isClicked = false;
-    //int layerMask;
+    [SerializeField]
+    private int interactRange;
+    protected int layerMask;
+    float rayLength = 100f;
+    public bool isClicked = true;
 
     void Awake()
     {
-        //layerMask = LayerMask.GetMask("Ground");
-        player = GetComponent<Player>();
+        layerMask = LayerMask.GetMask("Ground");
+        //player = GetComponent<Player>();
     }
+
+    void Start()
+    {
+    
+    }
+
     void Update()
     {
         HandleMouse();
@@ -26,16 +34,30 @@ public class InputManager : MonoBehaviour
 
     void HandleMouse()
     {
-        if(Input.GetMouseButtonUp(0))
+        //Debug.Log("TEST");
+        if(Input.GetMouseButton(0))
         {
-            Debug.Log("Mouse Button Left is released ");
-            //isClicked = false;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit, rayLength))
+            {
+                if(hit.transform.tag == "Node" && isClicked)
+                {                
+                    Vector3 newPosition = hit.transform.position;
+                    newPosition.z = 5f;
+                    transform.position = newPosition;
+                    SceneManager.LoadScene("Scene_1");
+                    
+                    //Vector3 x,y,z
+                     
+                    
+
+                }
+            }
         }
-        if(Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Mouse Button Left is clicked ");
-            //isClicked = true;
-        }
+        
+        
     }
     
     

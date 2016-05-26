@@ -8,6 +8,8 @@ TagManager:
   - EnemyHealth
   - Enemy
   - Scroller
+  - Ground
+  - Node
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
