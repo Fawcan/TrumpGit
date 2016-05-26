@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerHealth
   - EnemyHealth
+  - Enemy
+  - Scroller
   layers:
   - Default
   - TransparentFX

@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 /*
 Script handles the events of battle and checks whos turn it is.
 - created by David Halldin
 
 */
+//[RequireComponent(typeof(UIHandler))]
+
 public class BattleManager : MonoBehaviour
 {
     enum turn {player, enemy}
     [SerializeField]
     turn currentTurn;
-
+    [SerializeField]
+    public UIHandler message;
+    
     bool isClicked = false;
     //bool isDead = false;
     
@@ -20,7 +25,7 @@ public class BattleManager : MonoBehaviour
         
         Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>());
-
+        message.Print(" Crump made an attack ");
         yield return new WaitForSeconds(1);
         
 

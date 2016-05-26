@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+    Script handles all input from the mouse and seperates it from battle into
+    use within the world map. Script should only handel input accordingly.
+    -- Created By Albin Frisk Pettersson
+*/
 public class InputManager : MonoBehaviour
 {
     [SerializeField]
