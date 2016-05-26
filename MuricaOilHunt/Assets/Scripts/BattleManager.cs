@@ -15,6 +15,9 @@ public class BattleManager : MonoBehaviour
     turn currentTurn;
     [SerializeField]
     public UIHandler message;
+    Enemy enemy;
+    Player player;
+    
     
     bool isClicked = false;
     //bool isDead = false;
@@ -25,12 +28,14 @@ public class BattleManager : MonoBehaviour
         
         Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>());
-        message.Print(" Crump made an attack ");
+        //message.Print("Crump " + " made an attack " + " using ");
         yield return new WaitForSeconds(1);
         
 
         Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
             GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>());
+        //message.Print("William Wallace " + " made an attack " + "using ");
+        
 
     }
 
@@ -48,9 +53,11 @@ public class BattleManager : MonoBehaviour
 
     }//end UseAbility()
 
-    private void Attack(BaseUnit.ability ability, BaseUnit defender)
+    private void Attack(BaseUnit.ability ability, BaseUnit defender) // Private for writing purpouse
     {
         GameObject defenderHealth;
+        //message.Print(ability.name);
+        
         Debug.Log("Using: " + ability.name);
         Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
         defender.TakeDamage(ability.damage, ability.targetEffect);        
@@ -60,6 +67,7 @@ public class BattleManager : MonoBehaviour
         {           
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
+            message.Print("\n Crump " + " made an attack " + " using " + ability.name + " inflicting: " + ability.damage + " damage");
             Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;;
             Debug.Log("Player Attack was made: ");
@@ -70,6 +78,7 @@ public class BattleManager : MonoBehaviour
         {
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
+            message.Print("\n William Wallace " + " made an attack " + "using " + ability.name + " inflicting: " + ability.damage + " damage");
             currentTurn = turn.player;
             Debug.Log("Enemy Attack Was made");
             isClicked = false;            

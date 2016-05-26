@@ -19,10 +19,11 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     private RectTransform healthbar;
     protected Rigidbody2D RigidBody;
-    public bool notDead = true;
+    public bool isDead = false;
     protected BaseUnit target;
     [SerializeField]
     protected BattleManager battleManager;
+    public bool isBeaten = false;
 
     [System.Serializable]
     public class ability
@@ -74,9 +75,9 @@ public class BaseUnit : MonoBehaviour
         //effect
         //feedbackText.text += "\n The " + target + " took " + damage + " damage";
         health -= damage;
-        if(health <= 0 && notDead)
+        if(health <= 0 && isDead)
         {
-            notDead = false;
+            isDead = true;
             Die();            
         }
     }//end TakeDamage()
