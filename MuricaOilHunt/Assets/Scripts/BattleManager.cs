@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 /*
 Script handles the events of battle and checks whos turn it is.
 - created by David Halldin
@@ -18,6 +20,9 @@ public class BattleManager : MonoBehaviour
     Enemy enemy;
     Player player;    
     bool isClicked = false;
+    bool canAttack = true;
+    
+    
     
     
     IEnumerator AttackPhase(int type)
@@ -25,13 +30,13 @@ public class BattleManager : MonoBehaviour
         
         Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>());
-        //message.Print("Crump " + " made an attack " + " using ");
-        yield return new WaitForSeconds(1);
-        
+
+        yield return new WaitForSeconds(1);        
 
         Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
             GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>());
-        //message.Print("William Wallace " + " made an attack " + "using ");
+        canAttack = true;
+
         
 
     }
@@ -53,11 +58,10 @@ public class BattleManager : MonoBehaviour
     private void Attack(BaseUnit.ability ability, BaseUnit defender)
     {
         GameObject defenderHealth;
-        //message.Print(ability.name);
         
         Debug.Log("Using: " + ability.name);
         Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
-        defender.TakeDamage(ability.damage, ability.targetEffect);        
+        defender.TakeDamage(ability.damage, ability.targetEffect);
         Debug.Log("En testlinje!");
 
         if(currentTurn == turn.player)
@@ -68,7 +72,13 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;;
             Debug.Log("Player Attack was made: ");
-                        
+            if (defender.Health <= 0)
+            {
+                defender.Die();
+                SceneManager.LoadScene("WorldMap");
+            }
+
+
         }
 
         else
@@ -78,10 +88,16 @@ public class BattleManager : MonoBehaviour
             message.Print("\n William Wallace " + "used " + ability.name + " dealing: " + ability.damage + " damage");
             currentTurn = turn.player;
             Debug.Log("Enemy Attack Was made");
-            isClicked = false;            
-        }
-
-     
+            isClicked = false;
+            canAttack = false;
+            if(defender.Health <= 0)
+            {
+                defender.Die();
+                SceneManager.LoadScene("MainMenu");
+            }
+            
+                        
+        }  
                          
           
               

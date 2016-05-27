@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /*
 SCRIPT HANDLES BASE STRUCTURE FOR PLAYER AND ENEMY VALUES
@@ -62,12 +64,12 @@ public class BaseUnit : MonoBehaviour
     }
 
 
-    protected virtual void Die()
-    {
-        //play death animation
-        StartCoroutine(Delay(3));
+    public virtual void Die()
+    {   
         
-        Destroy(gameObject);        
+       //play death animation
+        Destroy(gameObject);
+        //SceneManager.LoadScene("MainMenu");        
         
     }
     
@@ -78,6 +80,7 @@ public class BaseUnit : MonoBehaviour
         health -= damage;
         if(health <= 0 && isDead)
         {
+           
             isDead = true;
             Die();            
         }

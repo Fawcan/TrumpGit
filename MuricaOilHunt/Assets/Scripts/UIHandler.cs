@@ -7,8 +7,8 @@ public class UIHandler : MonoBehaviour
 {
     [SerializeField]
     private Text feedBack; 
-    public ScrollRect scrollRect;
-    public RectTransform scrollableText;
+    //public ScrollRect scrollRect;
+   // public RectTransform scrollableText;
 
     private int maxCharacters = 150;
 
