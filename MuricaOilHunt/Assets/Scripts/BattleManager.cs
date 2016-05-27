@@ -21,9 +21,9 @@ public class BattleManager : MonoBehaviour
     Player player;    
     bool isClicked = false;
     bool canAttack = true;
-    
-    
-    
+    //public Sprite trumpIdle;
+    //public Sprite trumpAttacking;
+    //public Sprite trumpJibberish;    
     
     IEnumerator AttackPhase(int type)
     {

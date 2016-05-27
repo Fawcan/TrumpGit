@@ -228,7 +228,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad0c0d02ffa36e74c9fca6a9f5d55ce8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b264f56759875be49bc7c240fbe21bac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -271,8 +271,8 @@ GameObject:
   - 23: {fileID: 771071201}
   - 114: {fileID: 771071205}
   m_Layer: 0
-  m_Name: Node1
-  m_TagString: Node
+  m_Name: CanadaRink
+  m_TagString: NodeCanada
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a3668c0fe2d16c54f93e45e51a6fd7c7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -321,7 +321,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771071200}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &771071204
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771071200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 0.61, z: 7.92}
+  m_LocalPosition: {x: -0.56, y: 0.61, z: 7.909}
   m_LocalScale: {x: 0.39708745, y: 0.39708745, z: 0.025912127}
   m_Children: []
   m_Father: {fileID: 0}
@@ -398,7 +398,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a3668c0fe2d16c54f93e45e51a6fd7c7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -432,7 +432,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176649332}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1176649336
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +440,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176649332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: -0.72, z: 7.93}
+  m_LocalPosition: {x: 0.58, y: -0.72, z: 7.904}
   m_LocalScale: {x: 0.39708745, y: 0.39708745, z: 0.04276668}
   m_Children: []
   m_Father: {fileID: 0}

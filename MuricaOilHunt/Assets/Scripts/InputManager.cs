@@ -42,19 +42,15 @@ public class InputManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit, rayLength))
             {
-                if(hit.transform.tag == "Node" && isClicked)
+                if(hit.transform.tag == "NodeCanada" && isClicked)
                 {                
                     Vector3 newPosition = hit.transform.position;
                     newPosition.z = 5f;
                     transform.position = newPosition;
-                    SceneManager.LoadScene("Scene_1");
-                    
-                    //Vector3 x,y,z
-                     
-                    
-
+                    SceneManager.LoadScene("CanadaRink");
                 }
             }
+
         }
         
         

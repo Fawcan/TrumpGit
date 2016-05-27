@@ -10,4 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorldMap.unity
   - enabled: 1
-    path: Assets/Scenes/Scene_1.unity
+    path: Assets/Scenes/CanadaRink.unity

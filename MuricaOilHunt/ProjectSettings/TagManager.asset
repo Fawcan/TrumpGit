@@ -6,10 +6,14 @@ TagManager:
   tags:
   - PlayerHealth
   - EnemyHealth
-  - Enemy
+  - William
   - Scroller
   - Ground
-  - Node
+  - NodeCanada
+  - NodeScotland
+  - NodeSandLand
+  - NodeSweden
+  - Enemy
   layers:
   - Default
   - TransparentFX
