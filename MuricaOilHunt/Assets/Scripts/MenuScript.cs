@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
 
-	void Update ()
+
+    public void StartButton()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Scene_1");
-            Debug.Log("Scene Loaded");
-        }
-	
-	}
+        SceneManager.LoadScene("WorldMap");
+    }
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 }
