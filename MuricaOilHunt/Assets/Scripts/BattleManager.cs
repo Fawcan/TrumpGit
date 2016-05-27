@@ -50,7 +50,7 @@ public class BattleManager : MonoBehaviour
 
     }//end UseAbility()
 
-    private void Attack(BaseUnit.ability ability, BaseUnit defender) // Private for writing purpouse
+    private void Attack(BaseUnit.ability ability, BaseUnit defender)
     {
         GameObject defenderHealth;
         //message.Print(ability.name);
