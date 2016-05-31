@@ -20,7 +20,7 @@ public class BattleManager : MonoBehaviour
     Enemy enemy;
     Player player;    
     bool isClicked = false;
-    bool canAttack = true;
+    public bool canAttack = true;
     //public Sprite trumpIdle;
     //public Sprite trumpAttacking;
     //public Sprite trumpJibberish;    

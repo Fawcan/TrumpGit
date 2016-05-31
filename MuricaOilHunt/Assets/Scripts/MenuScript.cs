@@ -5,23 +5,67 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    float countDown = 3f;
-    IEnumerator Delay()
+    public void OnGUI()
     {
-        yield return new WaitForSeconds(3);
-        print(countDown);        
+        if (GUI.Button(new Rect(870, 600, 200, 30), "New Game"))
+        {
+            GameControl.control.NewGame();
+        }
+
+        if (GUI.Button(new Rect(870, 640, 200, 30), "Save Game"))
+        {
+            GameControl.control.Save();
+        }
+
+        if (GUI.Button(new Rect(870, 680, 200, 30), "Load Game"))
+        {
+            GameControl.control.Load();
+        }
+
+        if (GUI.Button(new Rect(870, 720, 200, 30), "Quit Game"))
+        {
+            GameControl.control.QuitGame();
+        }
     }
 
-
-    public void StartButton()
+    public void InGameGUI()
     {
-        StartCoroutine(Delay());
-        SceneManager.LoadScene("WorldMap");
-      
+        if (Input.GetButtonDown("Escape"))
+        {
+            if (GUI.Button(new Rect(870, 640, 200, 30), "Save Game"))
+            {
+                GameControl.control.Save();
+            }
 
-    }
-    public void QuitButton()
-    {
-        Application.Quit();
+            if (GUI.Button(new Rect(870, 680, 200, 30), "Load Game"))
+            {
+                GameControl.control.Load();
+            }
+        }
+
     }
 }
+
+
+
+
+//float countDown = 3f;
+//IEnumerator Delay()
+//{
+//    yield return new WaitForSeconds(3);
+//    print(countDown);        
+//}
+
+
+//public void StartButton()
+//{
+//    StartCoroutine(Delay());
+//    SceneManager.LoadScene("WorldMap");
+
+
+
+//}
+//public void QuitButton()
+//{
+//    Application.Quit();
+//}

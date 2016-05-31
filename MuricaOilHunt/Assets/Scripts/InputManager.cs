@@ -15,11 +15,15 @@ public class InputManager : MonoBehaviour
     protected int layerMask;
     float rayLength = 100f;
     public bool isClicked = true;
+    public Vector3 newPosition;
+    public WorldManager worldManager;
+
 
     void Awake()
     {
         layerMask = LayerMask.GetMask("Ground");
         //player = GetComponent<Player>();
+        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }
 
     void Start()
@@ -44,9 +48,11 @@ public class InputManager : MonoBehaviour
             {
                 if(hit.transform.tag == "NodeCanada" && isClicked)
                 {                
-                    Vector3 newPosition = hit.transform.position;
+                    newPosition = hit.transform.position;
                     newPosition.z = 5f;
                     transform.position = newPosition;
+                    worldManager.playerPosition = newPosition;
+                    Debug.Log("InputManager player pos: " + newPosition);                 
                     SceneManager.LoadScene("CanadaRink");
                 }
             }

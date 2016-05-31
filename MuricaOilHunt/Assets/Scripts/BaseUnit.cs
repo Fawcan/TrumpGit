@@ -26,6 +26,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected BattleManager battleManager;
     public bool isBeaten = false;
+    private WorldManager worldManager;
 
     [System.Serializable]
     public class ability
@@ -56,6 +57,7 @@ public class BaseUnit : MonoBehaviour
     void Awake()
     {
         RigidBody = GetComponent<Rigidbody2D>();
+        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }//end Awake()
 
     void Update()
@@ -65,11 +67,12 @@ public class BaseUnit : MonoBehaviour
 
 
     public virtual void Die()
-    {   
-        
-       //play death animation
+    {
+        worldManager.EnemyDefeted(name);
+
+        //play death animation
         Destroy(gameObject);
-        //SceneManager.LoadScene("MainMenu");        
+        //SceneManager.LoadScene("MainMenu");   
         
     }
     
