@@ -10,7 +10,7 @@ public class WorldManager : MonoBehaviour
     [SerializeField]
     public GameObject player;
 
-    private WorldManager worldManager;
+    private static WorldManager worldManager;
 
     void Awake()
     {
@@ -23,10 +23,8 @@ public class WorldManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
+        
         player = GameObject.FindGameObjectWithTag("Player");
-        DontDestroyOnLoad(gameObject);
 
 
     }
@@ -34,7 +32,7 @@ public class WorldManager : MonoBehaviour
     void OnLevelWasLoaded()
     {
         if (playerPosition == null)
-            playerPosition = new Vector3(0.58f, -0.72f, -0.5f);
+            playerPosition = new Vector3(0f, 0f, -0.5f);
         if (SceneManager.GetActiveScene().name == "WorldMap")
         {
             player = GameObject.FindGameObjectWithTag("Player");

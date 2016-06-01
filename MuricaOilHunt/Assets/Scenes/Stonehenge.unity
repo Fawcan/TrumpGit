@@ -85,6 +85,24 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &197491223 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192084, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+  m_PrefabInternal: {fileID: 880022280}
+--- !u!114 &197491224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197491223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &405216637
 Prefab:
   m_ObjectHideFlags: 0
@@ -127,6 +145,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1407dc0331d3d0d408b3acc955005299, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &423712933 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192364, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+  m_PrefabInternal: {fileID: 880022280}
+--- !u!114 &423712934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423712933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &557168980
 Prefab:
   m_ObjectHideFlags: 0
@@ -174,6 +210,22 @@ Prefab:
       propertyPath: battleManager
       value: 
       objectReference: {fileID: 1058015806}
+    - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: unit_abilitles.Array.data[0].abilityName
+      value: '"Throw Bottle"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: unit_abilitles.Array.data[1].abilityName
+      value: '"Bag Pipe Blow"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: unit_abilitles.Array.data[3].abilityName
+      value: '"You arse"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: unit_abilitles.Array.data[2].abilityName
+      value: '"Freedom"'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
   m_IsPrefabParent: 0
@@ -325,6 +377,78 @@ Prefab:
     - target: {fileID: 22407678, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_SizeDelta.y
       value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463416, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463416, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5448277
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463416, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446424, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446424, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5448277
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446424, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416388, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416388, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5448277
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416388, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402546, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402546, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5448277
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402546, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416840, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Text
+      value: McDuffin
+      objectReference: {fileID: 0}
+    - target: {fileID: 22489386, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22489386, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -27.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411538, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_Text
+      value: Conrad Crump
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409324, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 21.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409324, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -26.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
@@ -519,19 +643,27 @@ Prefab:
         type: 3}
     - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: unit_abilitles.Array.data[0].abilityName
-      value: Yell
+      value: '"Yell"'
       objectReference: {fileID: 0}
     - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: unit_abilitles.Array.data[1].abilityName
-      value: Bribe
+      value: '"Bribe"'
       objectReference: {fileID: 0}
     - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: unit_abilitles.Array.data[2].abilityName
-      value: Insult
+      value: '"Insult"'
       objectReference: {fileID: 0}
     - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: unit_abilitles.Array.data[3].abilityName
-      value: Jibberish
+      value: '"Jibberish"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
+      propertyPath: unit_abilitles.Array.data[0].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
+      propertyPath: unit_abilitles.Array.data[2].damage
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}

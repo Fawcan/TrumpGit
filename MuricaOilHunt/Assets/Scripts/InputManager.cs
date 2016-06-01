@@ -54,7 +54,7 @@ public class InputManager : MonoBehaviour
                     transform.position = newPosition;
                     worldManager.playerPosition = newPosition;
                     Debug.Log("InputManager player pos: " + newPosition);
-                    hit.transform.GetComponent<NodeHandler>().NodeClick();                
+                    hit.transform.GetComponent<NodeHandler>().NodeClick();
                     //SceneManager.LoadScene("CanadaRink");
                 }
             }

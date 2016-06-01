@@ -11,7 +11,6 @@ public class NodeHandler : MonoBehaviour
     [SerializeField]
     private Scene scene;
 
-
     public void NodeClick()
     {
         //animationClip.Play(name);

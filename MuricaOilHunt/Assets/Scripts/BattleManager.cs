@@ -73,16 +73,20 @@ public class BattleManager : MonoBehaviour
         {           
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n Conrad Crump " + "used " + ability.abilityName + " dealing: " + ability.damage + " damage");
+            message.Print(" Conrad Crump " + "used " + ability.abilityName + " dealing: " + ability.damage + " damage");
             //Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;;
             //Debug.Log("Player Attack was made: ");
             if (defender.Health <= 0)
             {
+                Debug.Log("eh,ah");
+
+
                 defender.Die();
-                PlayClip();
-               ((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
                 SceneManager.LoadScene("WorldMap");
+                PlayClip();
+                ((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
+
             }
 
 
@@ -90,9 +94,10 @@ public class BattleManager : MonoBehaviour
 
         else
         {
+
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n " + enemyName + " used " + ability.abilityName + " dealing: " + ability.damage + " damage");
+            message.Print(enemyName + " used " + ability.abilityName + " dealing: " + ability.damage + " damage");
             currentTurn = turn.player;
             Debug.Log("Enemy Attack Was made");
             isClicked = false;
@@ -101,9 +106,11 @@ public class BattleManager : MonoBehaviour
             {
                 defender.Die();
                 SceneManager.LoadScene("MainMenu");
+                Debug.Log("eh,ah");
+
             }
-            
-                        
+
+
         }  
                          
           
