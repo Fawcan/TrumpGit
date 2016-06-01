@@ -46,14 +46,16 @@ public class InputManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit, rayLength))
             {
-                if(hit.transform.tag == "NodeCanada" && isClicked)
-                {                
+                if(hit.transform.tag == "Node" && isClicked)//"node"
+                {   
+                                 
                     newPosition = hit.transform.position;
-                    newPosition.z = 5f;
+                    newPosition.z = -0.5f;
                     transform.position = newPosition;
                     worldManager.playerPosition = newPosition;
-                    Debug.Log("InputManager player pos: " + newPosition);                 
-                    SceneManager.LoadScene("CanadaRink");
+                    Debug.Log("InputManager player pos: " + newPosition);
+                    hit.transform.GetComponent<NodeHandler>().NodeClick();                
+                    //SceneManager.LoadScene("CanadaRink");
                 }
             }
 

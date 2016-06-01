@@ -6,24 +6,35 @@ using UnityEngine.SceneManagement;
 public class WorldManager : MonoBehaviour
 {
     [SerializeField]
-   public Vector3 playerPosition;
+    public Vector3 playerPosition; 
     [SerializeField]
     public GameObject player;
 
+    private WorldManager worldManager;
+
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        DontDestroyOnLoad(gameObject);
-        GameObject[] Managers = GameObject.FindGameObjectsWithTag("WorldManager");
-        if (Managers.Length > 1)
+        if (worldManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            worldManager = this;
+        }
+        else if (worldManager != this)
         {
             Destroy(gameObject);
         }
+
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        DontDestroyOnLoad(gameObject);
+
 
     }
 
     void OnLevelWasLoaded()
     {
+        if (playerPosition == null)
+            playerPosition = new Vector3(0.58f, -0.72f, -0.5f);
         if (SceneManager.GetActiveScene().name == "WorldMap")
         {
             player = GameObject.FindGameObjectWithTag("Player");

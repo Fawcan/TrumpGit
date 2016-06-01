@@ -14,7 +14,7 @@ public class GameControl : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
     {
-        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
+        //worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
         if(control == null)
         {
             DontDestroyOnLoad(gameObject);
