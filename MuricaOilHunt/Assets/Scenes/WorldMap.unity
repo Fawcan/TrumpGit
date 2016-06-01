@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f17bf1fa8c916c489acff17b867d14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: CanadaRink
+  nodeName: CanadaRink
   animationClip: {fileID: 0}
 --- !u!1 &1077530991
 GameObject:
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f17bf1fa8c916c489acff17b867d14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: ScotlandNode
+  nodeName: Stonehenge
   animationClip: {fileID: 0}
 --- !u!114 &1077530994
 MonoBehaviour:

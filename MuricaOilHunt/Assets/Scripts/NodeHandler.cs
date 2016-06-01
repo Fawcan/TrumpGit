@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class NodeHandler : MonoBehaviour
 {
     [SerializeField]
-    private string name;
+    private string nodeName;
     [SerializeField]
     private Animation animationClip;
     [SerializeField]
@@ -15,7 +15,8 @@ public class NodeHandler : MonoBehaviour
     public void NodeClick()
     {
         //animationClip.Play(name);
-        SceneManager.LoadScene(name);
+
+        SceneManager.LoadScene(nodeName);
      //TODO: Play.animation(name);
      //TODO: Loadscene(name);   
     }

@@ -18,7 +18,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     public UIHandler message;
     Enemy enemy;
-    Player player;    
+    Player player;
+    [SerializeField]
+    private string enemyName;
     bool isClicked = false;
     public bool canAttack = true;
     //public Sprite trumpIdle;
@@ -35,10 +37,13 @@ public class BattleManager : MonoBehaviour
 
         Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
             GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>());
-        canAttack = true;
+        canAttack = true;        
 
-        
+    }
 
+    IEnumerator PlayClip()
+    {
+        yield return new WaitForSeconds(2);
     }
 
     public void UseAbility(int type)
@@ -46,8 +51,8 @@ public class BattleManager : MonoBehaviour
         if (isClicked == false)
         {
             StartCoroutine(AttackPhase(type));
-            Debug.Log("Clicked one of the buttons");
-            Debug.Log("Enemy performed random attack");
+            //Debug.Log("Clicked one of the buttons");
+            //Debug.Log("Enemy performed random attack");
             isClicked = true;
         }
 
@@ -59,22 +64,24 @@ public class BattleManager : MonoBehaviour
     {
         GameObject defenderHealth;
         
-        Debug.Log("Using: " + ability.name);
-        Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
+       // Debug.Log("Using: " + ability.name);
+        //Debug.Log("Attack " + ability.name + " inflicted " + ability.damage);
         defender.TakeDamage(ability.damage, ability.targetEffect);
-        Debug.Log("En testlinje!");
+        //Debug.Log("En testlinje!");
 
         if(currentTurn == turn.player)
         {           
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n Conrad Crump " + "used " + ability.name + " dealing: " + ability.damage + " damage");
-            Debug.Log("Health is : " + defender.Health);
+            message.Print("\n Conrad Crump " + "used " + ability.abilityName + " dealing: " + ability.damage + " damage");
+            //Debug.Log("Health is : " + defender.Health);
             currentTurn = turn.enemy;;
-            Debug.Log("Player Attack was made: ");
+            //Debug.Log("Player Attack was made: ");
             if (defender.Health <= 0)
             {
                 defender.Die();
+                PlayClip();
+               ((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
                 SceneManager.LoadScene("WorldMap");
             }
 
@@ -85,7 +92,7 @@ public class BattleManager : MonoBehaviour
         {
             defenderHealth = GameObject.FindGameObjectWithTag("PlayerHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
-            message.Print("\n William Wallace " + "used " + ability.name + " dealing: " + ability.damage + " damage");
+            message.Print("\n " + enemyName + " used " + ability.abilityName + " dealing: " + ability.damage + " damage");
             currentTurn = turn.player;
             Debug.Log("Enemy Attack Was made");
             isClicked = false;

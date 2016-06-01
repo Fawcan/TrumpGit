@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/WorldMap.unity
   - enabled: 1
     path: Assets/Scenes/CanadaRink.unity
+  - enabled: 1
+    path: Assets/Scenes/Stonehenge.unity

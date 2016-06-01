@@ -27,11 +27,13 @@ public class BaseUnit : MonoBehaviour
     protected BattleManager battleManager;
     public bool isBeaten = false;
     private WorldManager worldManager;
+    [SerializeField]
+    private string targetName;
 
     [System.Serializable]
     public class ability
     {
-        public string name;
+        public string abilityName;
         public int damage;
         public int abilityPoints;
         public GameObject attackerEffect;
@@ -68,7 +70,7 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Die()
     {
-        worldManager.EnemyDefeted(name);
+        worldManager.EnemyDefeted(targetName);
 
         //play death animation
         Destroy(gameObject);
