@@ -16,14 +16,15 @@ public class InputManager : MonoBehaviour
     float rayLength = 100f;
     public bool isClicked = true;
     public Vector3 newPosition;
-    public WorldManager worldManager;
+    //public WorldManager worldManager;
 
 
     void Awake()
     {
+        Debug.LogWarning("Input Manager Awake()");
         layerMask = LayerMask.GetMask("Ground");
         //player = GetComponent<Player>();
-        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
+        //worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }
 
     void Start()
@@ -33,35 +34,65 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        //Debug.LogWarning("Update()");
         HandleMouse();
     }
 
     void HandleMouse()
     {
-        //Debug.Log("TEST");
-        if(Input.GetMouseButton(0))
+        //if (SceneManager.GetActiveScene().name == "WorldMapStart")
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if(Physics.Raycast(ray, out hit, rayLength))
+            //Debug.LogWarning("HandleMouse()");
+            if (Input.GetMouseButtonDown(0))
             {
-                if(hit.transform.tag == "Node" && isClicked)//"node"
-                {   
-                                 
-                    newPosition = hit.transform.position;
-                    newPosition.z = -0.5f;
-                    transform.position = newPosition;
-                    worldManager.playerPosition = newPosition;
-                    Debug.Log("InputManager player pos: " + newPosition);
-                    hit.transform.GetComponent<NodeHandler>().NodeClick();
-                    //SceneManager.LoadScene("CanadaRink");
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, rayLength))
+                {
+                    if (hit.transform.tag == "NodeCanada" && isClicked)//"node"
+                    {
+                        newPosition = hit.transform.position;
+                        newPosition.z = -0.5f;
+                        transform.position = newPosition;
+                        //int i = Application.loadedLevel;
+                        //Application.LoadLevel(i + 1);
+                        SceneManager.LoadScene("CanadaRink");
+                    }                   
+
+                }
+
+                if (Physics.Raycast(ray, out hit, rayLength))
+                {
+                    if (hit.transform.tag == "ToScotland" && isClicked)//"node"
+                    {
+                        newPosition = hit.transform.position;
+                        newPosition.z = -0.5f;
+                        transform.position = newPosition;
+                        //int i = Application.loadedLevel;
+                        //Application.LoadLevel(i + 1);
+                        //SceneManager.LoadScene("CanadaRink");
+                    }
+
+                }
+
+                if (Physics.Raycast(ray, out hit, rayLength))
+                {
+                    if (hit.transform.tag == "NodeNorway" && isClicked)//"node"
+                    {
+                        newPosition = hit.transform.position;
+                        newPosition.z = -0.5f;
+                        transform.position = newPosition;
+                        //int i = Application.loadedLevel;
+                        //Application.LoadLevel(i + 1);
+                        //SceneManager.LoadScene("CanadaRink");
+                    }
+
                 }
             }
 
+
         }
-        
-        
     }
     
     

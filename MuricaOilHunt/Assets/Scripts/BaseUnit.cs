@@ -26,7 +26,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected BattleManager battleManager;
     public bool isBeaten = false;
-    private WorldManager worldManager;
+    //private WorldManager worldManager;
     [SerializeField]
     private string targetName;
 
@@ -59,7 +59,7 @@ public class BaseUnit : MonoBehaviour
     void Awake()
     {
         RigidBody = GetComponent<Rigidbody2D>();
-        worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
+        //worldManager = GameObject.FindGameObjectWithTag("WorldManager").GetComponent<WorldManager>();
     }//end Awake()
 
     void Update()
@@ -70,12 +70,12 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Die()
     {
-        worldManager.EnemyDefeted(targetName);
+        //worldManager.EnemyDefeted(targetName);
 
         //play death animation
         Destroy(gameObject);
-        //SceneManager.LoadScene("MainMenu");   
-        
+        //SceneManager.LoadScene("MainMenu");
+
     }
     
     public virtual void TakeDamage(int damage, GameObject target)

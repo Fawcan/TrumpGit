@@ -7,19 +7,19 @@ public class MenuScript : MonoBehaviour
 {
     public void OnGUI()
     {
-        if (GUI.Button(new Rect(870, 600, 200, 30), "New Game"))
+        if (GUI.Button(new Rect(870, 600, 200, 30), "Start Game"))
         {
             GameControl.control.NewGame();
         }
 
         if (GUI.Button(new Rect(870, 640, 200, 30), "Save Game"))
         {
-            GameControl.control.Save();
+            //GameControl.control.Save();
         }
 
         if (GUI.Button(new Rect(870, 680, 200, 30), "Load Game"))
         {
-            GameControl.control.Load();
+            //GameControl.control.Load();
         }
 
         if (GUI.Button(new Rect(870, 720, 200, 30), "Quit Game"))
@@ -28,22 +28,7 @@ public class MenuScript : MonoBehaviour
         }
     }
 
-    public void InGameGUI()
-    {
-        if (Input.GetButtonDown("Escape"))
-        {
-            if (GUI.Button(new Rect(870, 640, 200, 30), "Save Game"))
-            {
-                GameControl.control.Save();
-            }
-
-            if (GUI.Button(new Rect(870, 680, 200, 30), "Load Game"))
-            {
-                GameControl.control.Load();
-            }
-        }
-
-    }
+    
 }
 
 

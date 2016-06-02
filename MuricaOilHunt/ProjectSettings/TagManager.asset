@@ -14,8 +14,9 @@ TagManager:
   - NodeSandLand
   - NodeSweden
   - Enemy
-  - Node
+  - ToScotland
   - WorldManager
+  - Node
   layers:
   - Default
   - TransparentFX

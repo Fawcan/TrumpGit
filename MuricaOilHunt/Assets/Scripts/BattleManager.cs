@@ -29,21 +29,34 @@ public class BattleManager : MonoBehaviour
     
     IEnumerator AttackPhase(int type)
     {
-        
-        Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
+        bool Continue = true;
+
+        Continue = Attack(GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().Abilities[type],
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>());
 
         yield return new WaitForSeconds(1);        
 
-        Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
+        if (Continue)
+        {
+            Attack(GameObject.FindGameObjectWithTag("Enemy").GetComponent<BaseUnit>().Abilities[(int)Random.Range(0, 4)],
             GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>());
-        canAttack = true;        
+            canAttack = true;
+        }
 
     }
 
     IEnumerator PlayClip()
     {
         yield return new WaitForSeconds(2);
+    }
+
+    IEnumerator HandleDeath(BaseUnit defender)
+    {
+        defender.Die();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("WorldMapCanadaBeaten");// insert what scene player should return to! for eg WorldMapCanadaBeaten        
+        //PlayClip();
+        //((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
     }
 
     public void UseAbility(int type)
@@ -60,7 +73,7 @@ public class BattleManager : MonoBehaviour
 
     }//end UseAbility()
 
-    private void Attack(BaseUnit.ability ability, BaseUnit defender)
+    private bool Attack(BaseUnit.ability ability, BaseUnit defender)
     {
         GameObject defenderHealth;
         
@@ -74,21 +87,18 @@ public class BattleManager : MonoBehaviour
             defenderHealth = GameObject.FindGameObjectWithTag("EnemyHealth");
             defenderHealth.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)defender.Health / (float)100;
             message.Print(" Conrad Crump " + "used " + ability.abilityName + " dealing: " + ability.damage + " damage");
-            //Debug.Log("Health is : " + defender.Health);
-            currentTurn = turn.enemy;;
+
             //Debug.Log("Player Attack was made: ");
             if (defender.Health <= 0)
             {
-                Debug.Log("eh,ah");
-
-
-                defender.Die();
-                SceneManager.LoadScene("WorldMap");
-                PlayClip();
-                ((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
-
+                StartCoroutine(HandleDeath(defender));
+                return false;
             }
-
+            else
+            {
+                currentTurn = turn.enemy;
+                return true;
+            }
 
         }
 
@@ -102,14 +112,13 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Enemy Attack Was made");
             isClicked = false;
             canAttack = false;
-            if(defender.Health <= 0)
+            if (defender.Health <= 0)
             {
                 defender.Die();
-                SceneManager.LoadScene("MainMenu");
-                Debug.Log("eh,ah");
-
+                return false;
             }
-
+            else
+                return true;
 
         }  
                          
