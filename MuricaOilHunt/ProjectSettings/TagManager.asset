@@ -17,6 +17,20 @@ TagManager:
   - ToScotland
   - WorldManager
   - Node
+  - NodeNorway
+  - ToNorway
+  - ToFinland
+  - ToSweden
+  - ToGermany
+  - ToSand
+  - ToRussia
+  - ToChina
+  - NodeFinland
+  - NodeSweden
+  - NodeGermany
+  - NodeSand
+  - NodeRussia
+  - NodeChina
   layers:
   - Default
   - TransparentFX
