@@ -228,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 163304, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_Name
-      value: Stoltenberg
+      value: Sandpeople
       objectReference: {fileID: 0}
     - target: {fileID: 21297574, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_Sprite
