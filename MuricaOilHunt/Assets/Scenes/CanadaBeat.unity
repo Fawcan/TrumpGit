@@ -158,7 +158,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 86149618}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -246,11 +246,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: orthographic size
-      value: 3.1667793
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 437574, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: m_LocalScale.z
       value: 5.951507
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.36786333
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5336289
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.7941176
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}

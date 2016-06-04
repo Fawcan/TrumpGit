@@ -279,6 +279,21 @@ public class InputManager : MonoBehaviour
                         SceneManager.LoadScene("China");
                     }
                 }
+
+                //To USA
+                if (Physics.Raycast(ray, out hit, rayLength))
+                {
+                    if (hit.transform.tag == "ToUSA" && isClicked)//"node"
+                    {
+                        newPosition = hit.transform.position;
+                        newPosition.z = -0.5f;
+                        transform.position = newPosition;
+                        //int i = Application.loadedLevel;
+                        //Application.LoadLevel(i + 1);
+                        SceneManager.LoadScene("BackUSA");
+                    }
+
+                }
                 //Code above this
             }
         }

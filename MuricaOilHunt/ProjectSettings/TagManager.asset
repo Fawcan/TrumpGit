@@ -31,6 +31,8 @@ TagManager:
   - NodeSand
   - NodeRussia
   - NodeChina
+  - NodeSweden
+  - ToUSA
   layers:
   - Default
   - TransparentFX

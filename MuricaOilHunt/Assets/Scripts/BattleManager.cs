@@ -54,7 +54,9 @@ public class BattleManager : MonoBehaviour
     {
         defender.Die();
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("WorldMapCanadaBeaten");// insert what scene player should return to! for eg WorldMapCanadaBeaten        
+        int i = Application.loadedLevel;
+        Application.LoadLevel(i + 1);
+        /*SceneManager.LoadScene("WorldMapCanadaBeaten");*/// insert what scene player should return to! for eg WorldMapCanadaBeaten        
         //PlayClip();
         //((MovieTexture)GetComponent<Renderer>().material.mainTexture).Play();
     }
