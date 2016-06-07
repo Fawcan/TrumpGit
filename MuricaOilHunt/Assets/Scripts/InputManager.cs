@@ -82,7 +82,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("ScotlandEnter");
+                        SceneManager.LoadScene("CutsceneCanada");
                     }
                 }
                 //Combat Scotland
@@ -109,7 +109,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("NorwayEnter");
+                        SceneManager.LoadScene("CutsceneNorway");
                     }
                 }
                 //Combat Norway
@@ -218,7 +218,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("SandEnter");
+                        SceneManager.LoadScene("CutsceneAirplane");
                     }
                 }
                 //Combat Sand
@@ -245,7 +245,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("RussiaEnter");
+                        SceneManager.LoadScene("CutsceneRussia");
                     }
 
                 }
@@ -273,7 +273,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("ChinaEnter");
+                        SceneManager.LoadScene("CutsceneChina");
                     }
 
                 }
@@ -301,7 +301,7 @@ public class InputManager : MonoBehaviour
                         transform.position = newPosition;
                         //int i = Application.loadedLevel;
                         //Application.LoadLevel(i + 1);
-                        SceneManager.LoadScene("BackUSA");
+                        SceneManager.LoadScene("CutsceneUSA");
                     }
 
                 }
