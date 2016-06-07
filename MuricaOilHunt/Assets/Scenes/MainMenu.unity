@@ -949,9 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Aplha 0.1.4
-
-'
+  m_Text: Version 1.0
 --- !u!222 &2116964413
 CanvasRenderer:
   m_ObjectHideFlags: 0
