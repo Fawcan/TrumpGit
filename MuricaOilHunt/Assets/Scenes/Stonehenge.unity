@@ -172,11 +172,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 494416, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.32
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 494416, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.18
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 494416, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -226,6 +226,11 @@ Prefab:
       propertyPath: unit_abilitles.Array.data[2].abilityName
       value: '"Freedom"'
       objectReference: {fileID: 0}
+    - target: {fileID: 21297574, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 292df4f3c1e14e344913150648e9abf1,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
   m_IsPrefabParent: 0
@@ -664,6 +669,18 @@ Prefab:
     - target: {fileID: 11419522, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: unit_abilitles.Array.data[2].damage
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
