@@ -6,15 +6,9 @@ using UnityEngine.SceneManagement;
 public class Player : BaseUnit
 {
 
-    //protected override void Die()
-    //{
-    //    base.Die();
-    //    SceneManager.LoadScene("Menu");
-    //}
-
-
-
-
-
-
+    public override void Die()
+    {
+        base.Die();
+        SceneManager.LoadScene("TrumpBeat");
+    }
 }

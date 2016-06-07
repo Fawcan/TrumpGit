@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     float rayLength = 100f;
     public bool isClicked = true;
     public Vector3 newPosition;
+    public bool textDelay = false;
     //public WorldManager worldManager;
 
 
@@ -29,7 +30,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
-    
+        StartCoroutine(TextDelay());
     }
 
     void Update()
@@ -38,12 +39,22 @@ public class InputManager : MonoBehaviour
         HandleMouse();
     }
 
+    IEnumerator TextDelay()
+    {
+        yield return new WaitForSeconds(3f);
+        textDelay = true;
+    }
+
     void HandleMouse()
     {
+
         //if (SceneManager.GetActiveScene().name == "WorldMapStart")
         {
+
+
+
             //Debug.LogWarning("HandleMouse()");
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && textDelay == true)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;

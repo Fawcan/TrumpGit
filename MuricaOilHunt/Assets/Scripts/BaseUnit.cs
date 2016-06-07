@@ -74,7 +74,7 @@ public class BaseUnit : MonoBehaviour
 
         //play death animation
         Destroy(gameObject);
-        //SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("TrumpBeat");
 
     }
     
@@ -87,7 +87,8 @@ public class BaseUnit : MonoBehaviour
         {
            
             isDead = true;
-            Die();            
+            Die();
+            SceneManager.LoadScene("TrumpBeat");
         }
     }//end TakeDamage()
         

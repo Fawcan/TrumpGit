@@ -212,19 +212,19 @@ Prefab:
       objectReference: {fileID: 1058015806}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[0].abilityName
-      value: '"Throw Bottle"'
+      value: '"Invade Ukraine"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[1].abilityName
-      value: '"Bag Pipe Blow"'
+      value: '"Shoot"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[3].abilityName
-      value: '"You arse"'
+      value: '"Rocket launch"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[2].abilityName
-      value: '"Freedom"'
+      value: '"Russian Winter"'
       objectReference: {fileID: 0}
     - target: {fileID: 163304, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_Name
@@ -250,6 +250,10 @@ Prefab:
     - target: {fileID: 494416, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.33799693
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
+      propertyPath: unit_abilitles.Array.data[2].damage
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
@@ -453,7 +457,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11416840, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_Text
-      value: Stoltenberg
+      value: 'Puttin
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 22489386, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -537,7 +543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11458852, guid: 128a6f1c4ab351c419b628e2c560ac25, type: 2}
       propertyPath: enemyName
-      value: McDuffin
+      value: Puttin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128a6f1c4ab351c419b628e2c560ac25, type: 2}
@@ -812,7 +818,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: orthographic size
-      value: 6.478707
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}

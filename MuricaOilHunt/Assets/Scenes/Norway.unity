@@ -212,19 +212,19 @@ Prefab:
       objectReference: {fileID: 1058015806}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[0].abilityName
-      value: '"Throw Bottle"'
+      value: '"Throw axe"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[1].abilityName
-      value: '"Bag Pipe Blow"'
+      value: '"Plunder"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[3].abilityName
-      value: '"You arse"'
+      value: '"Stab"'
       objectReference: {fileID: 0}
     - target: {fileID: 11425708, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: unit_abilitles.Array.data[2].abilityName
-      value: '"Freedom"'
+      value: '"Throw oil"'
       objectReference: {fileID: 0}
     - target: {fileID: 163304, guid: 29062371a47b17f4f9dbf468d1b191d1, type: 2}
       propertyPath: m_Name
@@ -361,35 +361,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22432202, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22432202, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22432202, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 22432202, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 22427622, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22427622, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 22407678, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22407678, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 11463416, guid: 1af23fd4c373ebb499cc74208e6ea2d3, type: 2}
       propertyPath: m_Colors.m_HighlightedColor.r
@@ -525,7 +525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11458852, guid: 128a6f1c4ab351c419b628e2c560ac25, type: 2}
       propertyPath: enemyName
-      value: McDuffin
+      value: Stoltenberg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128a6f1c4ab351c419b628e2c560ac25, type: 2}
@@ -622,11 +622,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.27
+      value: -7.49
       objectReference: {fileID: 0}
     - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.53
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 433194, guid: b8f026667f8525547b9d2aa257d7b84f, type: 2}
       propertyPath: m_RootOrder
@@ -768,11 +768,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 437574, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.19
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 437574, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 437574, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -800,7 +800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2013204, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
       propertyPath: orthographic size
-      value: 6.478707
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c6e7402cf66204ebe6a3561fbf33e4, type: 2}
